@@ -50,7 +50,7 @@ Follow these steps to run the Web Page Fetcher using Docker:
   ```
 6. You can find all the downloaded web page inside downloads folder
 
-##Example
+## Example
 
 # With Docker
   - only fetch web page
