@@ -37,7 +37,6 @@ Follow these steps to run the Web Page Fetcher using Docker:
   ```bash
   docker run --rm -v "$(pwd)":/app -w /app <image_name> ./fetch.rb --metadata <url>
   ```
-  - You can found the downloaded web page inside downloads folder
 5. Without docker container
   - go to folder repository
   - run bundle install
@@ -49,4 +48,27 @@ Follow these steps to run the Web Page Fetcher using Docker:
   ```bash
   ./fetch --metadata <url>
   ```
+6. You can find all the downloaded web page inside downloads folder
 
+##Example
+
+# With Docker
+  - only fetch web page
+  ```bash
+  docker run --rm -v "$(pwd)":/app -w /app fetch-page ./fetch.rb https://www.google.com
+  ```
+
+  - fetch web page with metadata
+  ```bash
+  docker run --rm -v "$(pwd)":/app -w /app fetch-page ./fetch.rb --metadata https://www.google.com 
+  ```
+# Without Docker
+  - only fetch web page
+  ```bash
+  ./fetch https://www.google.com
+  ```
+
+  - fetch web page with metadata
+  ```bash
+  ./fetch --metadata https://www.google.com
+  ```
